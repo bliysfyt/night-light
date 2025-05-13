@@ -1,0 +1,64 @@
+<!--pages/control/control.wxml-->
+
+
+<mp-dialog ext-class="dialog" show="{{dialogShow}}" title="未绑定设备"
+ bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+    <view>
+        请先绑定设备
+    </view>
+</mp-dialog>
+
+
+<mp-cells title="设备状态 ">
+<mp-cell>
+  <view>网路</view>
+  <view slot="footer">{{device_status ? '离线' :'在线'}}</view>
+</mp-cell>
+
+<mp-cell>
+  <view>电池</view>
+  <view slot="footer">{{battery_status}} </view>
+</mp-cell>
+
+</mp-cells>
+
+
+<view  class="s1" style="background-color: rgba({{r/100*240}}, {{g/100*240}}, {{b/100*240}}, 0.637)"></view>
+
+
+<mp-cells title="白灯控制">
+  <mp-cell>
+    <view>灯</view>
+    <switch slot="footer" checked="{{button_checked}}" disabled="{{device_status}}" bindchange="switchLedChange"/>
+  </mp-cell>
+  <mp-cell>
+    <view>亮度</view>
+    <slider bindchange="sliderLevelChange"  disabled="{{device_status}}" min="30" max="90" step='30' value="{{level*30}}"/>
+  </mp-cell>
+</mp-cells>
+
+<mp-cells title="彩灯控制">
+  <mp-cell>
+    <view>R</view>
+    <slider  disabled="{{device_status}}" bindchange="sliderRChange"  bindchanging="sliderRChanging" min="1" max="100" show-value value="{{r}}"/>
+  </mp-cell>
+  <mp-cell>
+    <view>G</view>
+    <slider disabled="{{device_status}}" bindchange="sliderGChange" bindchanging="sliderGChanging" min="1" max="100" show-value value="{{g}}"/>
+  </mp-cell>
+  <mp-cell>
+    <view>B</view>
+    <slider disabled="{{device_status}}" bindchange="sliderBChange"  bindchanging="sliderBChanging" min="1" max="100" show-value value="{{b}}"/>
+  </mp-cell>
+</mp-cells>
+
+<mp-cells title="设置">
+  
+    <!-- <mp-cell link='true' value="延时关闭" ></mp-cell>
+  
+ 
+    <mp-cell link='true' value="设置定时" bind:tap="navigateToTimePage" ></mp-cell> -->
+
+    <mp-cell link='true' value="更多设置" bind:tap="navigateToSetPage" ></mp-cell>
+
+</mp-cells>

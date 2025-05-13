@@ -1,0 +1,27 @@
+<!--pages/set/set.wxml-->
+
+<mp-cells title=" 更多设置">
+  <mp-cell>
+    <view>启用红外热释传感器</view>
+    <switch slot="footer" checked="{{pir}}" bindchange="switchPirChange"/>
+  </mp-cell>
+  <mp-cell>
+    <view>启用毫米波雷达</view>
+    <switch slot="footer" checked="{{ld}}" bindchange="switchLdChange"/>
+  </mp-cell>
+  <mp-cell>
+    <view>启用震动传感器</view>
+    <switch slot="footer" checked="{{vibrate}}" bindchange="switchVibrateChange"/>
+  </mp-cell>
+  <mp-cell>
+    <view>启用环境光传感器</view>
+    <switch slot="footer" checked="{{als}}" bindchange="switchAlsChange"/>
+  </mp-cell>
+</mp-cells>
+
+<view class="button-container">
+  <button type="primary" bind:tap="buttonApply">确认</button>
+</view>
+
+
+

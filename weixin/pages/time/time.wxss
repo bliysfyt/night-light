@@ -1,0 +1,7 @@
+/* pages/time/time.wxss */
+
+.button-container {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  margin-top: 60rpx; /* 或更多，根据需要调整 */
+}

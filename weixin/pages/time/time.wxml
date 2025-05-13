@@ -1,0 +1,17 @@
+<!--pages/time/time.wxml-->
+
+
+<mp-cells title=" 设置延时时间">
+  <mp-cell>
+    <picker mode="time" value="{{time}}" start="00:01" end="23:59" bindchange="bindTimeChange">
+      <view class="picker">
+        当前选择: {{time}}
+      </view>
+    </picker>
+
+</mp-cell>
+</mp-cells>
+
+<view class="button-container">
+  <button type="primary" bind:tap="buttonApply">确认</button>
+</view>

@@ -1,0 +1,9 @@
+/* pages/control/control.wxss */
+.s1 {
+  width: 920rpx;
+  height: 300rpx;
+  /* background-color: rgba(235, 210, 98, 0.637); */
+  /* border-radius: 36rpx;
+  align-self: center;
+  border: 5rpx solid #696969; */
+}
